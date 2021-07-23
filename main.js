@@ -50,14 +50,14 @@ const material7 = new THREE.MeshPhongMaterial( { color: 0x0d0a30, specular: 0x11
 
 let pumpstl
 let ypos = -20
-loader.load( 'pump2.STL', function ( geometry ) {
+loader.load( 'pump2.stl', function ( geometry ) {
   pumpstl = new THREE.Mesh( geometry, material4 );
   pumpstl.position.set( -0, ypos, -140);
   scene.add( pumpstl);
 } );
 
 
-loader.load( 'texto.STL', function ( geometry ) {
+loader.load( 'texto.stl', function ( geometry ) {
   textostl = new THREE.Mesh( geometry, material7 );
   textostl.position.set( -0, ypos, -140);
   scene.add( textostl);
