@@ -65,14 +65,14 @@ loader.load( 'texto.STL', function ( geometry ) {
 } );
 
 
-loader.load( 'impeller2.STL', function ( geometry ) {
+loader.load( 'impeller2.stl', function ( geometry ) {
   impellerstl = new THREE.Mesh( geometry, material2 );
   impellerstl.position.set( -0, ypos, -160);
   scene.add( impellerstl);
 } );
 
 
-loader.load( 'shaft.STL', function ( geometry ) {
+loader.load( 'shaft.stl', function ( geometry ) {
   shaftstl = new THREE.Mesh( geometry, material5 );
   shaftstl.position.set( -0, ypos, -197);
   shaftstl.rotation.y = Math.PI/2 ;
@@ -82,7 +82,7 @@ loader.load( 'shaft.STL', function ( geometry ) {
 } );
 
 
-loader.load( 'motorcontapa.STL', function ( geometry ) {
+loader.load( '../motorcontapa.stl', function ( geometry ) {
   motorstl = new THREE.Mesh( geometry, material6 );
   motorstl.position.set( -0, ypos, -179);
   
