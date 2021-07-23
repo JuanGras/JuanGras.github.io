@@ -50,14 +50,14 @@ const material7 = new THREE.MeshPhongMaterial( { color: 0x0d0a30, specular: 0x11
 
 let pumpstl
 let ypos = -20
-loader.load( '/pump2.STL', function ( geometry ) {
+loader.load( 'pump2.STL', function ( geometry ) {
   pumpstl = new THREE.Mesh( geometry, material4 );
   pumpstl.position.set( -0, ypos, -140);
   scene.add( pumpstl);
 } );
 
 
-loader.load( '/texto.STL', function ( geometry ) {
+loader.load( 'texto.STL', function ( geometry ) {
   textostl = new THREE.Mesh( geometry, material7 );
   textostl.position.set( -0, ypos, -140);
   scene.add( textostl);
@@ -65,14 +65,14 @@ loader.load( '/texto.STL', function ( geometry ) {
 } );
 
 
-loader.load( '/impeller2.STL', function ( geometry ) {
+loader.load( 'impeller2.STL', function ( geometry ) {
   impellerstl = new THREE.Mesh( geometry, material2 );
   impellerstl.position.set( -0, ypos, -160);
   scene.add( impellerstl);
 } );
 
 
-loader.load( '/shaft.STL', function ( geometry ) {
+loader.load( 'shaft.STL', function ( geometry ) {
   shaftstl = new THREE.Mesh( geometry, material5 );
   shaftstl.position.set( -0, ypos, -197);
   shaftstl.rotation.y = Math.PI/2 ;
@@ -82,7 +82,7 @@ loader.load( '/shaft.STL', function ( geometry ) {
 } );
 
 
-loader.load( '/motorcontapa.STL', function ( geometry ) {
+loader.load( 'motorcontapa.STL', function ( geometry ) {
   motorstl = new THREE.Mesh( geometry, material6 );
   motorstl.position.set( -0, ypos, -179);
   
