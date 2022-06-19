@@ -36,7 +36,7 @@ const ambientlight = new THREE.AmbientLight(0xffffff)
 scene.add(pointlight, ambientlight)
 
 
-const spacetexture = new THREE.TextureLoader().load('lateral.jpg');
+const spacetexture = new THREE.TextureLoader().load('BackGround.jpg');
 scene.background = spacetexture
 
 

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Abhaya Libre' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Actor' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">"
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <!--<link rel="stylesheet" href="style.css">-->
   <head>
@@ -21,7 +22,7 @@
 
 :root{
   --spacing: 380px;
-  --spacing2: 900px;
+  --spacing2: 600px;
 }
 
 main{
@@ -62,15 +63,15 @@ main{
 
 .name{
   /*ABeeZee*/
-  font-family: 'Abhaya Libre';
-  font-size:calc(35px + 2vw);
+  font-family: 'Open Sans';
+  font-size:calc(25px + 2vw);
   margin-bottom: 0%;
   margin-top: 0vw;
 }
 
 .job{
-  font-family: 'Abhaya Libre';
-  font-size:calc(20px + 1.5vw);
+  font-family: 'Open Sans';
+  font-size:calc(15px + 1.5vw);
   margin-bottom: 0%;
   margin-top: 0vw;
 }
@@ -88,7 +89,7 @@ main{
 }
 
 .bigheader{
-  font-family: 'Abhaya Libre';
+  font-family: 'Open Sans';
   font-size: 30px;
   margin-bottom: 0%;
   margin-top: 0vw;
@@ -144,7 +145,7 @@ main{
 }
 
 .Company{
-  font-family: 'Abhaya Libre';
+  font-family: 'Open Sans';
   font-size:25px;
   margin-top: 0px;
   display: flex;
@@ -167,6 +168,7 @@ main{
 
 .link2{
   color: rgb(157, 157, 255);
+  text-decoration: underline;
 }
 
 .btn-block{
@@ -203,7 +205,7 @@ main{
         <p class="smallheader">Web Development</p>
         <ul class="content">		
         <li>	Django.	</li>
-        <li>	JavaScript/ Three.js/ jQuery.	</li>
+        <li>	JavaScript | Three.js | jQuery.	</li>
         <li>	HTML.	</li>
         <li>	CSS.	</li>
         <li>	Bootstrap.	</li>
@@ -212,11 +214,10 @@ main{
         <p class="smallheader">Programming</p>		
         <ul class="content">		
         <li>	Python.	</li>
+        <li>	Go.	</li>
+        <li>	VB.NET.	</li>
         <li>	PostgreSQL.	</li>
         <li>	SQL Server.	</li>
-        <li>	Arduino.	</li>
-        <li>	VB.NET.	</li>
-        <li>	C.	</li>
         <li>	Windows Forms.	</li>
         </ul>		
             
@@ -225,6 +226,8 @@ main{
         <li>	Inventor.	</li>
         <li>	SolidWorks.	</li>
         <li>	Fusion 360.	</li>
+        <li>	Blender.	</li>
+
         </ul>		        	
       </div>
 
@@ -233,7 +236,7 @@ main{
         <hr>		
         <ul class="content">		
         <li>	[Django] STL Gear Generator (Currently in development).	</li>
-        <li><a class="link" href="https://apps.autodesk.com/FUSION/es/Detail/Index?id=1236778940008086660&os=Win64&appLang=en">
+        <li><a class="link2" href="https://apps.autodesk.com/FUSION/es/Detail/Index?id=1236778940008086660&os=Win64&appLang=en">
           	[Python] GF Gear Generator.	
           </a></li>
         <li>	Designed and 3D printed a planetary gear transmission using SolidWorks.	</li>
@@ -243,19 +246,32 @@ main{
       <div class="darkcontainer Experience">
         <p class="sectionheader section">Experience</p>
         <hr>
+          <div class="Oracle">
+            <p class="JobPosition">Software Developer II</p>
+            <p class="Company">Oracle (October 2021 – Today)</p>
+            <p class="Description content">Part of the 5G Policy team, responsible for implementing automated test scripts & test plans for various call flows as well as 5G related systems and functionalities.</p>
+            <div class="Accomplishments">
+              <ul class="content">		
+                <li>	Created shell scripts for the automated installation of 5G Policy services (SM-RX/PCF-BSF) on our Linux server, as well as the retrieval of information and storage.	</li>
+                <li>	Created test plans and featured automated testing using BDD and python for the ATS in the Linux server. </li>
+                <li>	Developed natural language & data analysis tools in Python. </li>
+                <li>	Started a Golang programming club within the team.	</li>
+                </ul>	
+            </div>
+          </div>
           <div class="Rhurpumpen">
             <p class="JobPosition">Automation Engineer Jr.</p>
-          <p class="Company">Ruhrpumpen (January 2021 –Today)</p>
-          <p class="Description content">Development of various desktop/CAD applications, calculators, designs for pumping related technology, and automated reporting programs.</p>
-          <div class="Accomplishments">
-            <ul class="content">		
-              <li>	Made the back end, and contributed with the front end, programming for the ECN (Engineering Chance Notice) reporting program for the upper management global governance engineering team.	</li>
-              <li>	Developed the automated design program for the company's <a class="link2" href="https://www.ruhrpumpen.com/en/products/vertical-pumps/vsp-chem-sump-pump">
-                vertical sump pump line.</a></li>
-              <li>	Ran successful simulations to minimize the material used in pump´s baseplates for a project, effectively reducing its weight by 25%.	</li>
-              <li>	Made an app, using VB.NET and Inventor, that automated the 3D modeling of sleeve couplings including its engineering drawing with tolerances and manufacturing notes.	</li>
-              </ul>	
-          </div>
+            <p class="Company">Ruhrpumpen (January 2021 - October 2021)</p>
+            <p class="Description content">Development of various desktop/CAD applications, calculators, designs for pumping related technology, and automated reporting programs.</p>
+            <div class="Accomplishments">
+              <ul class="content">		
+                <li>	Made the back end, and contributed with the front end, programming for the ECN (Engineering Chance Notice) reporting program for the upper management global governance engineering team.	</li>
+                <li>	Developed the automated design program for the company's <a class="link2" href="https://www.ruhrpumpen.com/en/products/vertical-pumps/vsp-chem-sump-pump">
+                  vertical sump pump line.</a></li>
+                <li>	Ran successful simulations to minimize the material used in pump´s baseplates for a project, effectively reducing its weight by 25%.	</li>
+                <li>	Made an app, using VB.NET and Inventor, that automated the 3D modeling of sleeve couplings including its engineering drawing with tolerances and manufacturing notes.	</li>
+                </ul>	
+            </div>
           </div>
           <div class="INSEME">
             <p class="JobPosition">Maintenance Engineer</p>
@@ -282,14 +298,15 @@ main{
         <hr>
         <ul class="content">		
           <li>	Mechanical Engineering at ITESO (graduated in 2020).	</li>
+          <li><a class="link2"href="JGOKubernetes.pdf">Kubernetes training.</a></li>
+          <li><a class="link2"href="https://lssinternational.org/egresados/">Six sigma white belt. </a></li>
           <li>	Engine maintenance course at CTEA.	</li>
           <li>	PLC Allen & Bradley programming course.	</li>
-          <li>	Six sigma white belt (diploma pending).	</li>
         </ul>	
       </div>
       
       <a href="./PumpAssembly.stl" class="btn btn-primary btn-block" download>Download the backgound pump model in .stl format</a>
-      <a href="./CV Juan Gras EN 2.pdf" class="btn btn-primary btn-block2" download>Download my CV in .pdf format</a>
+      <a target="_blank" href="./CV_Juan_Gras_EN.pdf" class="btn btn-primary btn-block2" download>Download my CV in .pdf format</a>
     </main>
 
 
