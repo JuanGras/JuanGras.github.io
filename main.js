@@ -1,165 +1,121 @@
-//import './style.css'
-import  * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
-import { STLLoader } from 'https://unpkg.com/three@0.127.0/examples/jsm/loaders/STLLoader.js';
-const scene = new THREE.Scene();
-var impellerstl;
-var shaftstl;
-var motorstl;
-var textostl;
+import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
+import { GLTFLoader } from 'https://unpkg.com/three@0.127.0/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js?module';
 
+//Adds a light to the scene
+function addlight(x, y, z, intensity) {
+  let light = new THREE.PointLight(0x7e8eab, intensity, 0);
+  light.position.set(x, y, z);
+  scene.add(light);
+}
 
+function resizeCanvasToDisplaySize() {
+  const canvas = renderer.domElement;
+  const width = canvas.clientWidth;
+  const height = canvas.clientHeight;
+  if (canvas.width !== width || canvas.height !== height) {
+    // you must pass false here or three.js fights the browser
+    renderer.setSize(width, height, false);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+  }
+}
 
+//Hide the spinner once the model is loaded
+const loadingManager = new THREE.LoadingManager();
+loadingManager.onLoad = function(){
+  let spinner = document.getElementById('spinner')
+  spinner.style.visibility = 'hidden'
+}
 
-const renderer = new THREE.WebGLRenderer({
-  canvas: document.querySelector('#bg'),
+const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector("canvas") });
+
+let loadedModel;
+let mixer;
+
+const glftLoader = new GLTFLoader(loadingManager);
+glftLoader.load('./Cyborg/CyborgNoBrainAnimation.glb', (assembly) => {
+  loadedModel = assembly;
+  mixer = new THREE.AnimationMixer(assembly.scene);
+  const clips = assembly.animations;
+
+  clips.forEach(function (clip) {
+    const action = mixer.clipAction(clip);
+    action.play();
+  });
+
+  assembly.scene.traverse(function (child) {
+    console.log(child)
+    if (child.name == "Sketchfab_model") {
+      console.log(child.name)
+      child.position.y = -.35
+    }
+  })
+
+  //rotate the model's initial position
+  assembly.scene.rotation.y = Math.PI / 1;
+
+  var scale = 12
+  loadedModel.scene.scale.set(scale, scale, scale);
+  scene.add(loadedModel.scene);
 });
 
-renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
+//set the camera
+const camera = new THREE.PerspectiveCamera(3, 2, 1, 2000);
+camera.position.z = 500;
+camera.position.y = -2.5;
+//set the scene with a white background
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xffffff);
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.setZ(-20);
-camera.position.setX(100);
-camera.position.setY(0); 
+// Add lights to the scene
+var position = 30;
+addlight(20, position, position, 3);
+addlight(-20, position, 0, 1.5);
+addlight(0, 0, -100, 1.8);
+addlight(0, -20, 10, 1);
+addlight(20, -100, -10, 1);
 
+// controls
+var controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
+controls.dampingFactor = 0.05;
+controls.screenSpacePanning = false;
 
+//Max/Min zoom
+controls.minDistance = 250;
+controls.maxDistance = 350;
+//Disable users ability to move object out of frame
+controls.enablePan = false;
 
+const clock = new THREE.Clock();
+function animate(time) {
 
-
-
-const pointlight = new THREE.PointLight(0xffffff)
-pointlight.position.set(20,40,40)
-
-const pointlight2 = new THREE.PointLight(0xffffff)
-pointlight2.position.set(20,40,-180)
-const ambientlight = new THREE.AmbientLight(0xffffff)
-scene.add(pointlight, ambientlight)
-
-
-const spacetexture = new THREE.TextureLoader().load('BackGround.jpg');
-scene.background = spacetexture
-
-
-/* Sets the gears into the scene */
-const loader = new STLLoader();
-const material2 = new THREE.MeshPhongMaterial( { color: 0x617EBA, specular: 0x111111, shininess: 0 } );
-const material4 = new THREE.MeshPhongMaterial( { color: 0x101a4f, specular: 0x111111, shininess: 0 } );
-const material5 = new THREE.MeshPhongMaterial( { color: 0x3e3e45, specular: 0x111111, shininess: 0 } );
-const material6 = new THREE.MeshPhongMaterial( { color: 0x485e75, specular: 0x111111, shininess: 0 } );
-const material7 = new THREE.MeshPhongMaterial( { color: 0x0d0a30, specular: 0x111111, shininess: 0 } );
-
-let pumpstl
-let ypos = -20
-loader.load( 'pump2.stl', function ( geometry ) {
-  pumpstl = new THREE.Mesh( geometry, material4 );
-  pumpstl.position.set( -0, ypos, -140);
-  scene.add( pumpstl);
-} );
-
-
-loader.load( 'texto.stl', function ( geometry ) {
-  textostl = new THREE.Mesh( geometry, material7 );
-  textostl.position.set( -0, ypos, -140);
-  scene.add( textostl);
-  
-} );
-
-
-loader.load( 'impeller2.stl', function ( geometry ) {
-  impellerstl = new THREE.Mesh( geometry, material2 );
-  impellerstl.position.set( -0, ypos, -160);
-  scene.add( impellerstl);
-} );
-
-
-loader.load( 'shaft.stl', function ( geometry ) {
-  shaftstl = new THREE.Mesh( geometry, material5 );
-  shaftstl.position.set( -0, ypos, -197);
-  shaftstl.rotation.y = Math.PI/2 ;
-  shaftstl.rotation.x = Math.PI/2 ;
-  //pumpstl.rotation.x = Math.PI / 6;
-  scene.add( shaftstl);
-} );
-
-
-loader.load( '../motorcontapa.stl', function ( geometry ) {
-  motorstl = new THREE.Mesh( geometry, material6 );
-  motorstl.position.set( -0, ypos, -179);
-  
-  scene.add( motorstl);
-
-  render();
-} );
-
-
-//Función para que el canvas se actualice cuando la ventana cambia de tamaño
-window.onresize = onWindowResize;
-function onWindowResize(){
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-
-    renderer.setSize( window.innerWidth, window.innerHeight );
-
-}
-
-//Función para rotar la cámara on scroll
-var matrix = new THREE.Matrix4(); // Pre-allocate empty matrix for performance. Don't want to make one of these every frame.
-var speed = 0.03;
-document.body.onscroll = function(e) {
-  // print "false" if direction is down and "true" if up
-  if(this.oldScroll > this.scrollY){
-    if(camera.position.z>-15){
-      
-      matrix.makeRotationY(speed);
-      // Apply matrix like this to rotate the camera.
-      camera.position.applyMatrix4(matrix);
-    }
-    else{
-      camera.translateX(.4);
-    }
-    
-  
-    // Make camera look at the box.
-    let y = pumpstl.position.y + 25
-    console.log(y)
-    let vector = new THREE.Vector3( pumpstl.position.x,y, pumpstl.position.z);
-    // Make camera look at the box.
-    camera.lookAt(vector);   
+  time *= 0.001;  // seconds
+  if (mixer) {
+    mixer.update(clock.getDelta());
   }
-  else{
-    //scroll hacia abajo
-
-    if(camera.position.z>-15){
-      
-      matrix.makeRotationY(-speed);
-      // Apply matrix like this to rotate the camera.
-      camera.position.applyMatrix4(matrix);
-    }
-    else{
-      camera.translateX(-.4);
-    }
-    let y = pumpstl.position.y + 25
-    console.log(y)
-    let vector = new THREE.Vector3( pumpstl.position.x,y, pumpstl.position.z);
-    // Make camera look at the box.
-    camera.lookAt(vector); 
-
+  //Constantly rotate the model
+  if (loadedModel) {
+    loadedModel.scene.rotation.y = 1 * Math.PI / 4 + time * 0.127;
   }
-  this.oldScroll = this.scrollY;
-}
 
-function render() {
-  requestAnimationFrame(render);
- 
-  //En realidad esta función debería estar dentro de animate o viceversa
-  impellerstl.rotation.z -= 0.02;
-  shaftstl.rotation.y -= 0.02;
-  let y = pumpstl.position.y + 25;
-  console.log(y);
-  let vector = new THREE.Vector3( pumpstl.position.x,y, pumpstl.position.z);
-  // Make camera look at the box.
-  camera.lookAt(vector);
+  controls.update(); // only required if controls.enableDamping = true, or if controls.autoRotate = true
+  resizeCanvasToDisplaySize();
   renderer.render(scene, camera);
+  requestAnimationFrame(animate);
 }
 
+requestAnimationFrame(animate);
 
+// In firefox the css ":active" property doesn't work properly for some reason; the following code fixes it.
+var grab = document.getElementById('grab')
+grab.onpointerdown = function () {
+  document.getElementById('grab').style.cursor = 'grabbing'
+}
+grab.onpointerup = function () {
+  document.getElementById('grab').style.cursor = 'grab'
+}
+grab.onpointerleave = function () {
+  document.getElementById('grab').style.cursor = 'grab'
+}

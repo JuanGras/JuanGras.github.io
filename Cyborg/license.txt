@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ghost in the Shell Cyborg Head
+* source:	https://sketchfab.com/3d-models/ghost-in-the-shell-cyborg-head-7a3ad0a509a746b5acaf206d638a2d8a
+* author:	PolyBoi (https://sketchfab.com/nikars)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ghost in the Shell Cyborg Head" (https://sketchfab.com/3d-models/ghost-in-the-shell-cyborg-head-7a3ad0a509a746b5acaf206d638a2d8a) by PolyBoi (https://sketchfab.com/nikars) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

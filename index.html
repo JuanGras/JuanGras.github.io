@@ -1,316 +1,267 @@
-<!DOCTYPE html>
-<html lang="en">
-  <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">"
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <!--<link rel="stylesheet" href="style.css">-->
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-      <style>
-          canvas{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
+<html>
 
-:root{
-  --spacing: 380px;
-  --spacing2: 600px;
-}
+<head>
+  <meta name="viewport" content="width=device-width">
+  <title>Juan Gras</title>
 
-main{
-  position: relative;
-  width: 100%;
-  margin: 0px auto;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  text-align: justify;
-  text-justify: inter-word;  
-}
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" data-n-g="">
+</head>
 
-.centered{
-  grid-column: 1/-1;
-  grid-row: 1;
-  text-align: center;
-  display: flexbox;
-  color: white;
-  position:relative;
-  margin: 0 auto;
-  padding: 1px;
-  margin-bottom: var(--spacing);
-}
+<body>
 
-.container{
-  background-color:rgba(0, 0, 0, 0.7);
-  Color: white;
-  padding: 1rem;
-  max-width: max-content;
-}
+  <div class="workarea">
 
-.darkcontainer{
-  background-color:rgba(22, 32, 77, 0.70);
-  Color: white;
-  padding: 1rem;
-  max-width: max-content;
-}
-
-.name{
-  /*ABeeZee*/
-  font-family: 'Open Sans';
-  font-size:calc(25px + 2vw);
-  margin-bottom: 0%;
-  margin-top: 0vw;
-}
-
-.job{
-  font-family: 'Open Sans';
-  font-size:calc(15px + 1.5vw);
-  margin-bottom: 0%;
-  margin-top: 0vw;
-}
-
-.sectionheader{
-  font-family: 'Open Sans';
-  font-size: 45px;
-  margin-bottom: 0%;
-  margin-top: 0vw;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.bigheader{
-  font-family: 'Open Sans';
-  font-size: 30px;
-  margin-bottom: 0%;
-  margin-top: 0vw;
-}
-
-.smallheader{
-  font-family: 'Open Sans';
-  font-size: 25px;
-  margin-bottom: 0%;
-  margin-top: 0vw;
-}
-
-.content{
-  font-family: 'Open Sans';
-  font-size: 22px;
-}
-
-.Skills{
-  grid-column: 1/8;
-  padding: 1rem;
-  margin-right: -20px;
-  max-width: max-content;
-  grid-row: 2;
-  background-color: rgba(37, 53, 124, 0.7);
-  Color: white;
-  margin-bottom: var(--spacing);
-}
-.Projects{
-  grid-column: 7/ -1;
-  padding: 1rem;
-  grid-row: 3;
-  Color: white;
-  margin-bottom: var(--spacing);
-}
-.Experience{
-  padding: 1rem;
-  grid-column: 1/ -1;
-  Color: white;
-  margin-bottom: var(--spacing2);
-}
-
-.JobPosition{
-  font-family: 'Open Sans';
-  font-size:calc(35px);
-  font-weight: 580;
-  margin-bottom: 0%;
-  margin-top: 40px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.Company{
-  font-family: 'Open Sans';
-  font-size:25px;
-  margin-top: 0px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.Education{
-  padding: 1rem;
-  grid-column: 2/ 10;
-  Color: white;
-  margin-bottom: var(--spacing);
-}
-
-.link{
-  color: blue;
-}
-
-.link2{
-  color: rgb(157, 157, 255);
-  text-decoration: underline;
-}
-
-.btn-block{
-  grid-column: 1/ 7;
-  background-color:rgb(16, 60, 141);
-    color: white;
-    text-shadow: black;
-    border-color: rgb(0, 0, 0);
-}
-
-.btn-block2{
-  grid-column: 7/ -1;
-  background-color:rgb(16, 60, 141);
-    color: white;
-    text-shadow: black;
-    border-color: rgb(0, 0, 0);
-
-}
-      </style>
-    <canvas id="bg">
-    </canvas>
-    <main>
-      
-        <header class="centered">
-        <div class="darkcontainer">
-          <p class="name">Juan Miguel Gras Olea</p>
-          <p class="job">Developer | Mechanical Engineer | Designer </p>
+    <section>
+      <div class="row">
+        <div class="col-left">
+          <div class="content">
+            <p class="title">Juan Miguel Gras Olea</p>
+          </div>
         </div>
-      </header>
-      <br>
-      <div class=" Skills">
-        <p class="sectionheader">Skills</p>
-        <hr>
-        <p class="smallheader">Web Development</p>
-        <ul class="content">		
-        <li>	Django.	</li>
-        <li>	JavaScript | Three.js | jQuery.	</li>
-        <li>	HTML.	</li>
-        <li>	CSS.	</li>
-        <li>	Bootstrap.	</li>
-        </ul>		
-            
-        <p class="smallheader">Programming</p>		
-        <ul class="content">		
-        <li>	Python.	</li>
-        <li>	Go.	</li>
-        <li>	VB.NET.	</li>
-        <li>	PostgreSQL.	</li>
-        <li>	SQL Server.	</li>
-        <li>	Windows Forms.	</li>
-        </ul>		
-            
-        <p class="smallheader">CAD</p>		
-        <ul class="content">		
-        <li>	Inventor.	</li>
-        <li>	SolidWorks.	</li>
-        <li>	Fusion 360.	</li>
-        <li>	Blender.	</li>
-
-        </ul>		        	
+        <div class="col-right">
+          <div class="content">
+            <a target="_blank" class="button noselect contact-button buttontext" href="./JuanGrasCV_2023.pdf">Download my CV</a>
+          </div>
+        </div>
       </div>
+    </section>
+    <div class="cv-name-description">Developer | Mechanical Engineer | Designer</div>
 
-      <div class="container Projects">
-        <p class="sectionheader">Projects</p>
-        <hr>		
-        <ul class="content">		
-        <li>	[Django] STL Gear Generator (Currently in development).	</li>
-        <li><a class="link2" href="https://apps.autodesk.com/FUSION/es/Detail/Index?id=1236778940008086660&os=Win64&appLang=en">
-          	[Python] GF Gear Generator.	
-          </a></li>
-        <li>	Designed and 3D printed a planetary gear transmission using SolidWorks.	</li>
-        </ul>	
-      </div>
 
-      <div class="darkcontainer Experience">
-        <p class="sectionheader section">Experience</p>
-        <hr>
-          <div class="Oracle">
-            <p class="JobPosition">Software Developer II</p>
-            <p class="Company">Oracle (October 2021 - Today)</p>
-            <p class="Description content">Part of the 5G Policy team, responsible for implementing automated test scripts & test plans for various call flows as well as 5G related systems and functionalities.</p>
-            <div class="Accomplishments">
-              <ul class="content">		
-                <li>	Created shell scripts for the automated installation of 5G Policy services (SM-RX/PCF-BSF) on our Linux server, as well as the retrieval of information and storage.	</li>
-                <li>	Created test plans and featured automated testing using BDD and python for the ATS in the Linux server. </li>
-                <li>	Developed natural language & data analysis tools in Python. </li>
-                <li>	Started a Golang programming club within the team.	</li>
-                </ul>	
+    <br>
+    <br>
+
+    <section>
+      <div class="canvasrow">
+        <div class="left-canvas">
+          <div class="content">
+            <p class="blue sectionheader">Interests:</p>
+            <div class="item-list left-padded">
+              <ul>
+                <li>Artificial Intelligence</li>
+                <li>Gear Design & Modeling</li>
+                <li>CAD Software Development</li>
+                <li>Cybersecurity</li>
+              </ul>
             </div>
           </div>
-          <div class="Rhurpumpen">
-            <p class="JobPosition">Automation Engineer Jr.</p>
-            <p class="Company">Ruhrpumpen (January 2021 - October 2021)</p>
-            <p class="Description content">Development of various desktop/CAD applications, calculators, designs for pumping related technology, and automated reporting programs.</p>
-            <div class="Accomplishments">
-              <ul class="content">		
-                <li>	Made the back end, and contributed with the front end, programming for the ECN (Engineering Chance Notice) reporting program for the upper management global governance engineering team.	</li>
-                <li>	Developed the automated design program for the company's <a class="link2" href="https://www.ruhrpumpen.com/en/products/vertical-pumps/vsp-chem-sump-pump">
-                  vertical sump pump line.</a></li>
-                <li>	Ran successful simulations to minimize the material used in pump's baseplates for a project, effectively reducing its weight by 25%.	</li>
-                <li>	Made an app, using VB.NET and Inventor, that automated the 3D modeling of sleeve couplings including its engineering drawing with tolerances and manufacturing notes.	</li>
-                </ul>	
+        </div>
+        <div class="right-canvas">
+          <div class="content">
+            <div class="right grab spinnercontainer" id="grab">
+              <div class="lds-dual-ring spinnerchild" id="spinner"></div>
+              <canvas></canvas>
             </div>
           </div>
-          <div class="INSEME">
-            <p class="JobPosition">Maintenance Engineer</p>
-            <p class="Company">INSEME (November 2018 - January 2021)</p>
-            <p class="Description content">More than two years of experience in preventive maintenance and repair of industrial level electrical installations and equipment.</p>
-            <div class="Accomplishments">
-              <ul class="content">		
-                <li>	Welded the baseplate for a 500 KVA transformer for Continental.	</li>
-                <li>	Was in charge for Heinz's maintenance & thermography job orders.	</li>
-                <li>	Successful installation of solar panels for Orgullo Azul's bottler in Tonaya, Jalisco.	</li>
-                <li>	Lots of interactions with clients, tool handling, and teamwork.	</li>
-              </ul>	
-          </div>
-          </div>
-          <div class="Ingenieros Mora">
-            <p class="JobPosition">Mechanical Designer</p>
-            <p class="Company">Ingenieros Mora (May 2018 - November 2018)</p>
-            <p class="Description content">Modeling of mechanical components and engineering drawings (including tolerances) for the design of an armored cabin for a private security company at Guadalajara.</p>	
-          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="container Education">
-        <p class="sectionheader">Education</p>
-        <hr>
-        <ul class="content">		
-          <li>	Mechanical Engineering at ITESO (graduated in 2020).	</li>
-          <li><a class="link2"href="JGOKubernetes.pdf">Kubernetes training.</a></li>
-          <li><a class="link2"href="SixSigmaJGO.pdf">Six sigma white belt. </a></li>
-          <li>	Engine maintenance course at CTEA.	</li>
-          <li>	PLC Allen & Bradley programming course.	</li>
-        </ul>	
+    <br>
+    <p class="grey content sectionheader">Projects</p>
+    <hr>
+
+    <div class="leftblock">
+      <div class="rounded rightshadow">
+        <div style="margin: 10px;">
+          <p class="blue sectionsubtitle">GF Gear Generator</p>
+          <div class="sectiontext">
+            <p style="margin-bottom: 5px;">Made a Fusion 360 pluggin that designs over 11 gear variants.</p>
+            <ul class="list">
+              <li>Version 1.1.0 was a <a class="blue">collaboration with MIT grads</a></li>
+              <li>One of the most popular apps on the Autodesk appstore</li>
+              <li>600+ downloads a week</li>
+            </ul>
+            <img class="leftimage" src="F360-gears.png">
+          </div>
+        </div>
       </div>
-      
-      <a href="./PumpAssembly.stl" class="btn btn-primary btn-block" download>Download the backgound pump model in .stl format</a>
-      <a target="_blank" href="./CV_Juan_Gras_EN.pdf" class="btn btn-primary btn-block2" download>Download my CV in .pdf format</a>
-    </main>
+    </div>
 
+    <div class="rightblock">
+      <div class="rounded leftshadow">
+        <div style="margin: 10px;">
+          <p class="blue sectionsubtitle">PyGears</p>
+          <div class="sectiontext">
+            <p style="margin-bottom: 5px;">Made a Python library to create STL gears.</p>
+          <ul class="list">
+            <li>Working on the website, and the desktop app, to make them both of <a class="blue">free public use</a></li>
+          </ul>
+          <img class="leftimage" src="3gearsbg.png">
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <script type="module" src="main.js"></script>
+    <br>
+    <p class="grey content sectionheader blue" style="text-align: center;">Skills</p>
+    <hr>
+    <div class="image-row">
+      <h2 class="sectionsubtitle skill-header">Programming</h2>
+      <div class="skills-images">
+        <div class="skill-image">
+          <div class="row">
+            <img src="Python2.png" class="noselect" alt="Python Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">Python</p>
+          </div>
+        </div>
+        <div class="skill-image">
+          <div class="row">
+            <img src="Golang2.png" class="noselect" alt="Golang Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">Golang</p>
+          </div>
+        </div>
+        <div class="skill-image">
+          <div class="row">
+            <img src="VBNet2.png" class="noselect" alt="VBNet Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">VB.NET</p>
+          </div>
+        </div>
+        <div class="skill-image">
+          <div class="row">
+            <img src="Bash.png" class="noselect" alt="Bash Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">Bash</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  </body>
+    <div class="image-row">
+      <h2 class="sectionsubtitle skill-header">Web development</h2>
+      <div class="skills-images">
+        <div class="skill-image">
+          <div class="row">
+            <img src="html5.png" class="noselect" alt="HTML5 Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">HTML5</p>
+          </div>
+        </div>
+        <div class="skill-image">
+          <div class="row">
+            <img src="css3.png" class="noselect" alt="CSS3 Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">CSS3</p>
+          </div>
+        </div>
+        <div class="skill-image">
+          <div class="row">
+            <img src="js.png" class="noselect" alt="JavaScript Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">JavaScript</p>
+          </div>
+        </div>
+      </div>
+      <div class="skills-images">
+        <div class="skill-image">
+          <div class="row">
+            <img src="Django.png" class="noselect" alt="Django Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">Django</p>
+          </div>
+        </div>
+        <div class="skill-image">
+          <div class="row">
+            <img src="Postgres.png" class="noselect" alt="PosgreSQL Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">PostgreSQL</p>
+          </div>
+        </div>
+        <div class="skill-image">
+          <div class="row">
+            <img src="Threejs.png" class="noselect" alt="Threejs Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">Threejs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="image-row">
+      <h2 class="sectionsubtitle skill-header">Software</h2>
+      <div class="skills-images">
+        <div class="skill-image">
+          <div class="row">
+            <img src="Linux.png" class="noselect" alt="Linux Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">Linux</p>
+          </div>
+        </div>
+        <div class="skill-image">
+          <div class="row">
+            <img src="Git.png" class="noselect" alt="Git Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">Git</p>
+          </div>
+        </div>
+        <div class="skill-image">
+          <div class="row">
+            <img src="Kubernetes.png" class="noselect" alt="Kubernetes Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">Kubernetes</p>
+          </div>
+        </div>
+        <div class="skill-image">
+          <div class="row">
+            <img src="SolidWorks2.png" class="noselect" alt="SolidWorks Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">SolidWorks</p>
+          </div>
+        </div>
+        <div class="skill-image">
+          <div class="row">
+            <img src="Inventor2.png" class="noselect" alt="Inventor Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">Inventor</p>
+          </div>
+        </div>
+        <div class="skill-image">
+          <div class="row">
+            <img src="Fusion360.png" class="noselect" alt="Fusion3 60 Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">Fusion 360</p>
+          </div>
+        </div>
+        <div class="skill-image">
+          <div class="row">
+            <img src="Blender.png" class="noselect" alt="Blender Logo">
+          </div>
+          <div class="row">
+            <p class="image-text grey">Blender</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <p class="grey content sectionheader blue" style="text-align: center;">Experience</p>
+    <hr>
+
+    <br>
+
+  </div>
+
+  <script defer="" type="module" src="main.js"></script>
+  <script type="text/javascript"></script>
+</body>
+
 </html>
