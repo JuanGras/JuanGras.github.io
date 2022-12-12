@@ -165,7 +165,7 @@ img {
 }
 
 .rounded {
-    background-color: white;
+    background-color: #fafafa;
     border-radius: 5px;
 }
 
@@ -218,7 +218,7 @@ img {
 }
 
 .skill-header{
-    margin-top: 75px;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
@@ -254,7 +254,40 @@ img {
 }
 
 
-
+/*Experience Section*/
+.experience{
+    margin: 0;
+    text-align: center;
+}
+.experience-text{
+    margin-bottom: 0;
+}
+.positiontext {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 0.5em;
+  }
+.position-description{
+    font-size: var(--imagetext);
+    font-weight: 600;
+    text-align: justify;
+}
+.experience-div{
+    width: min(1300px, 100%);
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 6rem;
+}
+.justify{
+    text-align: justify;
+}
+.experience-list{
+    max-width: 85%;
+    text-align: justify;
+    font-size: 2.1rem;
+    font-weight: 600;
+    display:inline-block;
+}
 
 
 
@@ -346,8 +379,15 @@ img {
     .sectiontext, .cv-name-description {
         font-size: 1.5rem;
       }
+
+    .positiontext {
+        font-size: 1.75rem;
+      }
     .image-text{
         font-size: 1rem;
+    }
+    .position-description{
+        font-size: 1.25rem;
     }
 
     .left-canvas {
@@ -376,6 +416,14 @@ img {
     .skill-header{
         margin-top: 25px;
         margin-bottom: 10px;
+    }
+
+    .experience-div{
+        margin-top: 25px;
+        margin-bottom: 1rem;
+    }
+    .experience-list{
+        display: none;
     }
 
 }
