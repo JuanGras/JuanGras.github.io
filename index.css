@@ -8,7 +8,7 @@
     --sectionsubtitle: 2.75rem;
     --sectiontext: 2.25rem;
     --imagetext: 1.75rem;
-    --buttontext: 1.75rem;
+    --buttontext: 2rem;
 }
 
 html {
@@ -146,7 +146,7 @@ ul {
 
 
 /*Projects Section*/
-.list{
+.list {
     margin-bottom: 5px;
     text-align: justify;
 }
@@ -196,18 +196,18 @@ img {
     font-size: var(--sectionheader);
     font-weight: 800;
     margin-bottom: 20px;
-  }
-  
-  .sectionsubtitle {
+}
+
+.sectionsubtitle {
     font-size: var(--sectionsubtitle);
     font-weight: 800;
     margin-bottom: 20px;
-  }
+}
 
-  .sectiontext {
+.sectiontext {
     font-size: var(--sectiontext);
     font-weight: 600;
-  }
+}
 
 
 /*Skills Section*/
@@ -217,7 +217,7 @@ img {
 
 }
 
-.skill-header{
+.skill-header {
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -246,7 +246,7 @@ img {
     height: auto;
 }
 
-.image-text{
+.image-text {
     font-size: var(--imagetext);
     font-weight: 800;
     margin-top: 15px;
@@ -255,40 +255,62 @@ img {
 
 
 /*Experience Section*/
-.experience{
+.experience {
     margin: 0;
     text-align: center;
 }
-.experience-text{
+
+.experience-text {
     margin-bottom: 0;
 }
+
 .positiontext {
     font-size: 2.5rem;
     font-weight: 600;
     margin-top: 0.5em;
-  }
-.position-description{
+}
+
+.position-description {
     font-size: var(--imagetext);
     font-weight: 600;
     text-align: justify;
 }
-.experience-div{
+
+.experience-div {
     width: min(1300px, 100%);
     margin: auto;
     margin-top: 50px;
     margin-bottom: 6rem;
 }
-.justify{
+
+.justify {
     text-align: justify;
 }
-.experience-list{
+
+.experience-list {
     max-width: 85%;
     text-align: justify;
     font-size: 2.1rem;
     font-weight: 600;
-    display:inline-block;
+    display: inline-block;
 }
 
+/*Education Section*/
+.educationlink {
+    color: var(--font);
+    text-decoration: none;
+}
+
+.educationlink:hover {
+    cursor: pointer;
+    color: var(--highlight);
+    text-decoration: underline;
+}
+
+.fa {
+    vertical-align: middle;
+    font-size: 1.75em;
+}
 
 
 /*Button section*/
@@ -338,10 +360,10 @@ img {
         font-size: var(--buttontext);
     }
 
-    .skills-images{
+    .skills-images {
         margin-left: 30px;
         margin-right: 30px;
-        justify-content:space-between;
+        justify-content: space-between;
     }
 }
 
@@ -368,7 +390,7 @@ img {
         margin-bottom: 0px;
     }
 
-    .sectionsubtitle{
+    .sectionsubtitle {
         font-size: 2rem;
     }
 
@@ -376,17 +398,20 @@ img {
         font-size: 15px;
     }
 
-    .sectiontext, .cv-name-description {
+    .sectiontext,
+    .cv-name-description {
         font-size: 1.5rem;
-      }
+    }
 
     .positiontext {
         font-size: 1.75rem;
-      }
-    .image-text{
+    }
+
+    .image-text {
         font-size: 1rem;
     }
-    .position-description{
+
+    .position-description {
         font-size: 1.25rem;
     }
 
@@ -413,16 +438,17 @@ img {
         height: 30rem;
     }
 
-    .skill-header{
+    .skill-header {
         margin-top: 25px;
         margin-bottom: 10px;
     }
 
-    .experience-div{
+    .experience-div {
         margin-top: 25px;
         margin-bottom: 1rem;
     }
-    .experience-list{
+
+    .experience-list {
         display: none;
     }
 
