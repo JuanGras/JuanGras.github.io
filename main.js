@@ -29,7 +29,7 @@ loadingManager.onLoad = function(){
 }
 
 const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector("canvas") });
-
+renderer.setPixelRatio(window.devicePixelRatio);
 let loadedModel;
 let mixer;
 
@@ -89,6 +89,7 @@ controls.maxDistance = 350;
 controls.enablePan = false;
 
 const clock = new THREE.Clock();
+let roto = true;
 function animate(time) {
 
   time *= 0.001;  // seconds
@@ -96,8 +97,11 @@ function animate(time) {
     mixer.update(clock.getDelta());
   }
   //Constantly rotate the model
-  if (loadedModel) {
-    loadedModel.scene.rotation.y = 1 * Math.PI / 4 + time * 0.127;
+  if (loadedModel && roto) {
+    loadedModel.scene.rotation.y = 1 * Math.PI / 4 + clock.elapsedTime * 0.146;
+    // if (loadedModel.scene.rotation.y >= 3.14159){
+    //   roto = false;
+    // }
   }
 
   controls.update(); // only required if controls.enableDamping = true, or if controls.autoRotate = true

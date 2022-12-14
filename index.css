@@ -1,14 +1,14 @@
 :root {
-    --background: white;
+   --background: white;
     --font: #2A2641;
     --highlight: #1A73E8;
     --detail: #4e6078;
-    --title: 5rem;
-    --sectionheader: 3.5rem;
-    --sectionsubtitle: 2.75rem;
-    --sectiontext: 2.25rem;
-    --imagetext: 1.75rem;
-    --buttontext: 2rem;
+    --title: 6.5rem;
+    --sectionheader: 4.5rem;
+    --sectionsubtitle: 3.75rem;
+    --sectiontext: 3rem;
+    --imagetext: 2.25rem;
+    --buttontext: 2.75rem;
 }
 
 html {
@@ -50,7 +50,7 @@ body {
 }
 
 .cv-name-description {
-    font-size: 2.25rem;
+    font-size: 2.75rem;
     font-weight: 600;
     color: var(--detail);
 }
@@ -71,14 +71,14 @@ section {
 }
 
 .col-left {
-    width: 70%;
+    width: 65%;
     display: table-cell;
     vertical-align: middle;
     /* background: rgb(127, 127, 197) */
 }
 
 .col-right {
-    width: 30%;
+    width: 35%;
     /* background: ForestGreen; */
     text-align: center;
     vertical-align: middle;
@@ -102,7 +102,7 @@ h1 {
 }
 
 .left-canvas {
-    width: 70%;
+    width: 65%;
     display: table-cell;
     vertical-align: middle;
     /* background: rgb(127, 127, 197) */
@@ -110,12 +110,12 @@ h1 {
 
 canvas {
     width: 100%;
-    height: 45rem;
+    height: 50rem;
 }
 
 .right-canvas {
-    width: 30%;
-    height: 45rem;
+    width: 35%;
+    height: 50rem;
     /* background: ForestGreen; */
     text-align: center;
     vertical-align: middle;
@@ -131,6 +131,7 @@ canvas {
 .item-list {
     font-size: var(--sectionsubtitle);
     font-weight: 800;
+    max-width: 85%;
 }
 
 ul {
@@ -149,6 +150,7 @@ ul {
 .list {
     margin-bottom: 5px;
     text-align: justify;
+    max-width: 90%;
 }
 
 img {
@@ -265,7 +267,7 @@ img {
 }
 
 .positiontext {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 600;
     margin-top: 0.5em;
 }
@@ -290,9 +292,13 @@ img {
 .experience-list {
     max-width: 85%;
     text-align: justify;
-    font-size: 2.1rem;
+    font-size: 2.75rem;
     font-weight: 600;
     display: inline-block;
+}
+
+.experience-list li{
+    margin-bottom: 5px;
 }
 
 /*Education Section*/
@@ -370,15 +376,25 @@ img {
 /*When screen size is smaller than 990px...*/
 @media (max-width: 990px) {
     .title {
-        font-size: 3.75rem;
+        font-size: var(--title);
     }
 
     .buttontext {
         font-size: var(--buttontext);
     }
+
+    .left-canvas {
+        display: block;
+        width: 100%;
+    }
+
+    .right-canvas {
+        display: block;
+        width: 100%;
+    }
 }
 
-/*When screen size is bigger than 768px...*/
+/*When screen size is smaller than 768px...*/
 @media (max-width: 768px) {
     .title {
         font-size: 3.5rem;
@@ -413,16 +429,6 @@ img {
 
     .position-description {
         font-size: 1.25rem;
-    }
-
-    .left-canvas {
-        display: block;
-        width: 100%;
-    }
-
-    .right-canvas {
-        display: block;
-        width: 100%;
     }
 
     .item-list {
