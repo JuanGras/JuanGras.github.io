@@ -149,6 +149,7 @@ ul {
 /*Projects Section*/
 .list {
     margin-bottom: 5px;
+    margin-right: 5px;
     text-align: justify;
     max-width: 90%;
 }
@@ -209,6 +210,7 @@ img {
 .sectiontext {
     font-size: var(--sectiontext);
     font-weight: 600;
+    margin-top: 15px;
 }
 
 
@@ -269,7 +271,7 @@ img {
 .positiontext {
     font-size: 3.5rem;
     font-weight: 600;
-    margin-top: 0.5em;
+    margin-top: 0.1em;
 }
 
 .position-description {
@@ -298,7 +300,7 @@ img {
 }
 
 .experience-list li{
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 /*Education Section*/
@@ -315,7 +317,7 @@ img {
 
 .fa {
     vertical-align: middle;
-    font-size: 1.75em;
+    font-size: 1.15em;
 }
 
 
@@ -392,6 +394,10 @@ img {
         display: block;
         width: 100%;
     }
+    canvas {
+        width: 85%;
+        height: 50rem;
+    }
 }
 
 /*When screen size is smaller than 768px...*/
@@ -418,6 +424,9 @@ img {
     .cv-name-description {
         font-size: 1.5rem;
     }
+    .sectiontext{
+        margin-top: 5px;
+    }
 
     .positiontext {
         font-size: 1.75rem;
@@ -441,7 +450,7 @@ img {
 
     canvas,
     .right-canvas {
-        height: 30rem;
+        height: 35rem;
     }
 
     .skill-header {
