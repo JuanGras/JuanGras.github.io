@@ -318,6 +318,18 @@ img {
 .fa {
     vertical-align: middle;
     font-size: 1.15em;
+    margin-left: 5px;
+}
+
+/*Link*/
+.link {
+    color: var(--font);
+    text-decoration: underline;
+}
+
+.link:hover {
+    cursor: pointer;
+    color: var(--highlight);
 }
 
 
@@ -417,7 +429,7 @@ img {
     }
 
     .buttontext {
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .sectiontext,

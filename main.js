@@ -1,6 +1,6 @@
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js';
 import { GLTFLoader } from 'https://unpkg.com/three@0.127.0/examples/jsm/loaders/GLTFLoader.js';
-import { OrbitControls } from 'https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js?module';
+import { OrbitControls } from 'https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js?module';
 
 //Adds a light to the scene
 function addlight(x, y, z, intensity) {
@@ -45,9 +45,9 @@ glftLoader.load('./Cyborg/CyborgNoBrainAnimation.glb', (assembly) => {
   });
 
   assembly.scene.traverse(function (child) {
-    console.log(child)
+    // console.log(child)
     if (child.name == "Sketchfab_model") {
-      console.log(child.name)
+      // console.log(child.name)
       child.position.y = -.35
     }
   })
