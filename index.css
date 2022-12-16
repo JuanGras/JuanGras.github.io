@@ -131,7 +131,7 @@ canvas {
 .item-list {
     font-size: var(--sectionsubtitle);
     font-weight: 800;
-    max-width: 85%;
+    max-width: 95%;
 }
 
 ul {
@@ -173,10 +173,12 @@ img {
 }
 
 .rightshadow {
+    border: 1px solid rgb(0 0 0 / 10%);
     box-shadow: 5px 5px 5px rgb(165, 174, 184);
 }
 
 .leftshadow {
+    border: 1px solid rgb(0 0 0 / 10%);
     box-shadow: -5px 5px 5px rgb(165, 174, 184);
 }
 
@@ -320,6 +322,54 @@ img {
     font-size: 1.15em;
     margin-left: 5px;
 }
+
+/*footer*/
+hr{
+    margin-top: .1em;
+}
+
+#foot-header{
+    margin-bottom: 0px;
+}
+
+.footer{
+    /* margin-bottom: 6em; */
+    border-radius: 2.5px;
+    /* background: rgb(67,67,67);
+    background: linear-gradient(0deg, var(--highlight) 0%, var(--font) 50%); */
+    color: var(--font);
+    text-align: center;
+}
+
+.footer-icons{
+
+    display: flex;
+    justify-content: space-around;
+
+    -webkit-transition: color 2s, font-size 2s;
+       -moz-transition: color 2s, font-size 2s;
+         -o-transition: color 2s, font-size 2s;
+            transition: color 2s, font-size 2s;
+}
+
+.foot-icon{
+    cursor: pointer;
+    font-size: 3.5rem;
+    color: var(--font);
+    text-decoration: none;
+    
+    -webkit-transition: font-size 0.5s;
+       -moz-transition: font-size 0.5s;
+         -o-transition: font-size 0.5s;
+            transition: font-size 0.5s;
+}
+
+.foot-icon:hover {
+    font-size: 4.5rem;
+    color: var(--highlight);
+}
+
+
 
 /*Link*/
 .link {
