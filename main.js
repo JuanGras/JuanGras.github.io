@@ -123,3 +123,20 @@ grab.onpointerup = function () {
 grab.onpointerleave = function () {
   document.getElementById('grab').style.cursor = 'grab'
 }
+
+
+function hidePresentationElements() {
+  const presentationElements = document.querySelectorAll('.presentation');
+  for (let i = 0; i < presentationElements.length; i++) {
+    presentationElements[i].style.visibility = 'hidden';
+    presentationElements[i].style.height = '0';
+  }
+}
+
+window.onload = function () {
+  if(window.location.hash == "#presentation"){
+  }
+  else{
+    hidePresentationElements();
+  }
+};

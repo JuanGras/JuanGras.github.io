@@ -532,6 +532,9 @@ hr{
 }
 
 
+.squareimg{
+    max-height: 400px;
+}
 
 
 /*Spinner*/
@@ -589,4 +592,23 @@ hr{
     user-select: none;
     /* Non-prefixed version, currently
                     supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+.centerdiv{
+    display: flex;
+    justify-content: center;
+}
+
+.imagesdiv{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.experience-img{
+    max-height: 360px;
+}
+
+.centered-image{
+    width: 30%;
 }
