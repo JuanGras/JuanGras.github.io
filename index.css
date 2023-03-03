@@ -433,7 +433,7 @@ hr{
     .skills-images {
         margin-left: 30px;
         margin-right: 30px;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
 
