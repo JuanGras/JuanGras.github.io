@@ -7,6 +7,7 @@
     --sectionheader: 4.5rem;
     --sectionsubtitle: 3.75rem;
     --sectiontext: 3rem;
+    --summary: 2.5rem;
     --imagetext: 2.25rem;
     --buttontext: 2.75rem;
 }
@@ -216,7 +217,7 @@ img {
 }
 
 .summary{
-    font-size: var(--imagetext);
+    font-size: var(--summary);
     font-weight: 600;
     margin-top: 15px;
     text-align: justify;
