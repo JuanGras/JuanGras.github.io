@@ -215,6 +215,13 @@ img {
     margin-top: 15px;
 }
 
+.summary{
+    font-size: var(--imagetext);
+    font-weight: 600;
+    margin-top: 15px;
+    text-align: justify;
+}
+
 
 /*Skills Section*/
 .image-row {
