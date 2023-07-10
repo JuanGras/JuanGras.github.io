@@ -24,7 +24,7 @@ html {
 }
 
 body {
-    margin: 20px;
+    margin: 18px;
 }
 
 .workarea {
@@ -504,6 +504,10 @@ hr{
     }
     .sectiontext{
         margin-top: 5px;
+    }
+
+    .summary{
+        font-size: 1.5rem;
     }
 
     .positiontext {
