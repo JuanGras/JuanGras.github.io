@@ -129,7 +129,7 @@ function hidePresentationElements() {
   const presentationElements = document.querySelectorAll('.presentation');
   for (let i = 0; i < presentationElements.length; i++) {
     presentationElements[i].style.visibility = 'hidden';
-    presentationElements[i].style.height = '0';
+    presentationElements[i].style.height = '0px';
   }
 }
 
